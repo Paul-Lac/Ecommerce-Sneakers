@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+
+// import Hamburger from "./components/Hamburger";
+import Logo from "./assets/logo.svg";
+import IconCart from "./assets/icon-cart.svg";
+import ImgAvatar from "./assets/image-avatar.png";
+import IconMenu from "./assets/icon-menu.svg";
+import IconClose from "./assets/icon-close.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav className="navbar">
+        <ul>
+          <span
+            className={`nav-leftpart ${
+              hamburgerOpen ? "nav-leftpart-column" : ""
+            }`}
+          >
+            {hamburgerOpen ? (
+              <img
+                className="icon-close"
+                src={IconClose}
+                alt="Icone Close"
+                onClick={toggleHamburger}
+              />
+            ) : (
+              <img
+                className="icon-menu"
+                src={IconMenu}
+                alt="Icone Menu"
+                onClick={toggleHamburger}
+              />
+            )}
+            <img
+              className={`logo ${hamburgerOpen ? "hide" : ""}`}
+              src={Logo}
+              alt="Logo"
+            />
+            <span
+              className={`nav-links ${
+                hamburgerOpen ? "nav-links-show" : "nav-links-hide"
+              }`}
+            >
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </span>
+          </span>
+          <span className={`nav-rightpart ${hamburgerOpen ? "hide" : ""}`}>
+            <img className="icon-cart" src={IconCart} alt="Icon Cart" />
+            <img className="avatar" src={ImgAvatar} alt="Avatar" />
+          </span>
+        </ul>
+      </nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar {
+  margin: 28px auto 34px auto;
+  max-width: 1125px;
+  padding: 0 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-leftpart {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-links {
+  display: flex;
+}
+.nav-rightpart {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  height: 20px;
+  margin-right: 56.5px;
+}
+.navbar .icon-cart {
+  height: 20px;
+}
+
+.navbar .avatar {
+  height: 50px;
+  margin-left: 46px;
+}
+.navbar li {
+  font-weight: var(--fontweight-thin);
+  font-size: 15px;
+  color: var(--color-neutral-darkgrayishblue);
+  margin-right: 32px;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin: 20px 24px 29px 24px;
+    /* border: 1px solid pink; */
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .icon-menu {
+    margin-right: 16px;
+    height: 15px;
+    display: flex;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .icon-close {
+    height: 13.4px;
+    margin-top: 18px;
+    margin-bottom: 53px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .nav-leftpart-column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links-hide {
+    display: none;
+  }
 
-.read-the-docs {
-  color: #888;
+  .nav-links-show {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links-show li {
+    font-size: 18px;
+    font-weight: var(--fontweight-bold);
+    color: var(--color-neutral-verydarkblue);
+  }
 }
