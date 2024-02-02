@@ -1,9 +1,0 @@
-.icon-menu {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .icon-menu {
-    display: flex;
-  }
-}

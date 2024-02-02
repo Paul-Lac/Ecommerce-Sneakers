@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-// import Hamburger from "./components/Hamburger";
 import Logo from "./assets/logo.svg";
 import IconCart from "./assets/icon-cart.svg";
 import ImgAvatar from "./assets/image-avatar.png";
 import IconMenu from "./assets/icon-menu.svg";
 import IconClose from "./assets/icon-close.svg";
+
 import "./App.css";
 
 function App() {
