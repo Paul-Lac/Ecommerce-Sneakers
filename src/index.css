@@ -3,13 +3,17 @@
   --color-primary-orange: rgb(255, 125, 26);
   --color-primary-paleorange: rgb(255, 237, 224);
   --color-neutral-verydarkblue: rgb(29, 32, 37);
-  --color-neutral-darkgrayishblue: rgb(105, 112, 125);
-  --color-neutral-grayishblue: rgb(182, 188, 200);
-  --color-neutral-lightgrayishblue: rgb(247, 248, 253);
+  --color-neutral-darkgrayishblue: #69707d;
+  --color-neutral-grayishblue: #b6bcc8;
+  --color-neutral-lightgrayishblue: #f7f8fd;
   --color-neutral-white: rgb(255, 255, 255);
   --color-neutral-black: rgb(0, 0, 0);
 
   /* Font weight */
   --fontweight-thin: 400;
   --fontweight-bold: 700;
+}
+
+.hide-overflow {
+  overflow: hidden;
 }

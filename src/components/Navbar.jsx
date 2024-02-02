@@ -1,11 +1,5 @@
 import { useState } from "react";
 
-import Logo from "../assets/Logo.svg";
-import IconCart from "../assets/icon-cart.svg";
-import ImgAvatar from "../assets/image-avatar.png";
-import IconMenu from "../assets/icon-menu.svg";
-import IconClose from "../assets/icon-close.svg";
-
 import "./Navbar.css";
 
 function Navbar() {
@@ -13,11 +7,12 @@ function Navbar() {
 
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
+    document.body.classList.add("hide-overflow");
   };
 
   return (
     <nav className="navbar">
-      {/* <div className={`${hamburgerOpen ? "mobile-overlay" : ""}`} /> */}
+      <div className={`${hamburgerOpen ? "mobile-overlay" : ""}`} />
       <ul>
         <span
           className={`nav-leftpart ${
@@ -27,21 +22,21 @@ function Navbar() {
           {hamburgerOpen ? (
             <img
               className="icon-close"
-              src={IconClose}
+              src="../../public/icon-close.svg"
               alt="Icone Close"
               onClick={toggleHamburger}
             />
           ) : (
             <img
               className="icon-menu"
-              src={IconMenu}
+              src="../../icon-menu.svg"
               alt="Icone Menu"
               onClick={toggleHamburger}
             />
           )}
           <img
             className={`logo ${hamburgerOpen ? "hide" : ""}`}
-            src={Logo}
+            src="../../logo.svg"
             alt="Logo"
           />
           <span
@@ -57,8 +52,16 @@ function Navbar() {
           </span>
         </span>
         <span className={`nav-rightpart ${hamburgerOpen ? "hide" : ""}`}>
-          <img className="icon-cart" src={IconCart} alt="Icon Cart" />
-          <img className="avatar" src={ImgAvatar} alt="Avatar" />
+          <img
+            className="icon-cart"
+            src="../../public/icon-cart.svg"
+            alt="Icon Cart"
+          />
+          <img
+            className="avatar"
+            src="../../public/image-avatar.png"
+            alt="Avatar"
+          />
         </span>
       </ul>
       <hr className="hz-line hz-line-hide" />

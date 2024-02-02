@@ -1,7 +1,7 @@
 .navbar {
-  margin: 28px auto 34px auto;
-  max-width: 1125px;
-  padding: 0 15px;
+  margin: 1.75rem auto 2.1rem auto;
+  max-width: 70.3rem;
+  padding: 0 1rem;
 }
 
 .navbar ul {
@@ -25,22 +25,22 @@
 }
 
 .navbar .logo {
-  height: 20px;
-  margin-right: 56.5px;
+  height: 1.25rem;
+  margin-right: 3.5rem;
 }
 .navbar .icon-cart {
-  height: 20px;
+  height: 1.25rem;
 }
 
 .navbar .avatar {
-  height: 50px;
-  margin-left: 46px;
+  height: 3.1rem;
+  margin-left: 2.8rem;
 }
 .navbar li {
   font-weight: var(--fontweight-thin);
-  font-size: 15px;
+  font-size: 0.9rem;
   color: var(--color-neutral-darkgrayishblue);
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .icon-menu {
@@ -48,20 +48,20 @@
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 .hz-line {
   height: 1px;
-  max-width: 1110px;
+  max-width: 69.3rem;
   color: #e4e9f2;
-  margin-top: 34px;
+  margin-top: 2.1rem;
+  margin-bottom: 5.6rem;
 }
 
 @media screen and (max-width: 768px) {
   .navbar {
-    margin: 20px 24px 29px 24px;
-    /* border: 1px solid pink; */
+    margin: 1.25rem 1.5rem 1.8rem 1.5rem;
     padding: 0;
   }
 
@@ -76,22 +76,28 @@
   }
 
   .icon-menu {
-    margin-right: 16px;
-    height: 15px;
+    margin-right: 1rem;
+    height: 0.9rem;
     display: flex;
   }
 
   .icon-close {
-    height: 13.4px;
-    margin-top: 18px;
-    margin-bottom: 53px;
+    height: 0.8rem;
+    margin-top: 2.4rem;
+    margin-bottom: 3.3rem;
   }
 
   .nav-leftpart-column {
     flex-direction: column;
     align-items: flex-start;
-    /* border: 2px solid blue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 15.6rem;
+    padding-left: 1.5rem;
     z-index: 2;
+    background-color: white;
   }
 
   .nav-links-hide {
@@ -101,11 +107,11 @@
   .nav-links-show {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .nav-links-show li {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: var(--fontweight-bold);
     color: var(--color-neutral-verydarkblue);
   }
